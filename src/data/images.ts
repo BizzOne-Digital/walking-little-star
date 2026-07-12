@@ -64,6 +64,24 @@ export const images = {
       width: 700,
       height: 500,
     },
+    day4: {
+      src: "/images/home-day4.png",
+      alt: "Children learning Spanish through songs and play at daycare",
+      width: 700,
+      height: 500,
+    },
+    day5: {
+      src: "/images/home-day5.png",
+      alt: "Healthy and nutritious meals served to children at daycare",
+      width: 700,
+      height: 500,
+    },
+    day6: {
+      src: "/images/home-day6.png",
+      alt: "A parent reuniting with their child at the end of a happy daycare day",
+      width: 700,
+      height: 500,
+    },
   },
   about: {
     hero: {

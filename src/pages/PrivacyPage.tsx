@@ -27,7 +27,7 @@ export const PrivacyPage: React.FC = () => {
           style={{ backgroundImage: "url('/images/privacy-hero.png')" }}
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-navy/80" aria-hidden="true" />
+        <div className="absolute inset-0 bg-navy/90" aria-hidden="true" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <div className="flex justify-center mb-5">

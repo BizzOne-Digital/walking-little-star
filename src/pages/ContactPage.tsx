@@ -21,7 +21,7 @@ export const ContactPage: React.FC = () => {
           style={{ backgroundImage: "url('/images/contact-hero.png')" }}
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-navy/78" aria-hidden="true" />
+        <div className="absolute inset-0 bg-navy/90" aria-hidden="true" />
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           {[12, 16, 10].map((size, i) => (
             <div
@@ -41,7 +41,7 @@ export const ContactPage: React.FC = () => {
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <div className="inline-flex items-center gap-2 bg-white/10 text-sky-light font-body font-700 text-sm px-4 py-1.5 rounded-full mb-5">
+            <div className="inline-flex items-center gap-2 bg-white/20 text-white font-body font-700 text-sm px-4 py-1.5 rounded-full mb-5">
               <Star size={12} fill="#fedebe" aria-hidden="true" />
               Contact Us
             </div>
@@ -52,7 +52,7 @@ export const ContactPage: React.FC = () => {
             >
               {contactPage.heroHeading}
             </h1>
-            <p className="font-body text-sky-light text-xl leading-relaxed max-w-2xl mx-auto">
+            <p className="font-body text-white/90 text-xl leading-relaxed max-w-2xl mx-auto">
               {contactPage.heroSubtext}
             </p>
           </motion.div>

@@ -32,7 +32,7 @@ export const AboutPage: React.FC = () => {
           aria-hidden="true"
         />
         {/* Strong dark overlay so all text is clearly readable */}
-        <div className="absolute inset-0 bg-navy/88" aria-hidden="true" />
+        <div className="absolute inset-0 bg-navy/90" aria-hidden="true" />
 
         {/* Subtle star decorations */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -59,7 +59,7 @@ export const AboutPage: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <div className="inline-flex items-center gap-2 bg-white/10 text-sky-light font-body font-700 text-sm px-4 py-1.5 rounded-full mb-5">
+            <div className="inline-flex items-center gap-2 bg-white/20 text-white font-body font-700 text-sm px-4 py-1.5 rounded-full mb-5">
               <Star size={12} fill="#fedebe" aria-hidden="true" />
               About Us
             </div>
@@ -72,7 +72,7 @@ export const AboutPage: React.FC = () => {
               {aboutPage.heroHeading}
             </h1>
 
-            <p className="font-body text-sky-light text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
+            <p className="font-body text-white/90 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
               {aboutPage.heroSubtext}
             </p>
 
@@ -85,7 +85,7 @@ export const AboutPage: React.FC = () => {
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 bg-white/10 text-white border border-white/20 font-body font-700 px-6 py-3 rounded-full hover:bg-white/20 transition-all focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-navy min-h-[44px]"
+                className="inline-flex items-center gap-2 bg-white text-navy font-body font-700 px-6 py-3 rounded-full hover:bg-peach hover:-translate-y-0.5 transition-all shadow-soft focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-navy min-h-[44px]"
               >
                 Contact Us
               </Link>

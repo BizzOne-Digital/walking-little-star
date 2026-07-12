@@ -31,21 +31,21 @@ const rhythmItems = [
     time: "Late Morning",
     title: "Spanish Learning",
     description: "Fun songs, familiar words, and stories in Spanish as part of the daily flow.",
-    image: null,
+    image: images.home.day4,
     color: "bg-sky-pale",
   },
   {
     time: "Midday",
     title: "Healthy Meals & Snacks",
     description: "Nutritious, balanced meals served with care to support growing minds and bodies.",
-    image: null,
+    image: images.home.day5,
     color: "bg-peach",
   },
   {
     time: "Afternoon",
     title: "Rest, Movement & Pickup",
     description: "Quiet rest time, outdoor activities, afternoon play, and warm family reunions.",
-    image: null,
+    image: images.home.day6,
     color: "bg-sky-pale",
   },
 ];
@@ -72,7 +72,6 @@ export const DailyRhythmSection: React.FC = () => {
           Sample schedule only — daily activities vary based on children's ages, needs, and interests.
         </motion.p>
 
-        {/* Timeline grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {rhythmItems.map((item, index) => (
             <motion.div
@@ -83,22 +82,18 @@ export const DailyRhythmSection: React.FC = () => {
               transition={{ duration: 0.6, delay: index * 0.08, ease: "easeOut" }}
               viewport={{ once: true, margin: "-50px" }}
             >
-              {/* Image if available */}
-              {item.image && (
-                <div className="relative h-44 overflow-hidden">
-                  <SmartImage
-                    src={item.image.src}
-                    alt={item.image.alt}
-                    width={item.image.width}
-                    height={item.image.height}
-                    rounded="rounded-none"
-                    animate
-                    className="h-44 !pb-0"
-                  />
-                </div>
-              )}
-
-              <div className={`${item.image ? "" : `${item.color} h-16`}`} />
+              {/* Image */}
+              <div className="relative h-44 overflow-hidden">
+                <SmartImage
+                  src={item.image.src}
+                  alt={item.image.alt}
+                  width={item.image.width}
+                  height={item.image.height}
+                  rounded="rounded-none"
+                  animate
+                  className="h-44 !pb-0"
+                />
+              </div>
 
               <div className="p-5">
                 <div className="flex items-center gap-2 mb-2">
