@@ -87,11 +87,11 @@ const IntroScreen: React.FC<IntroScreenProps> = ({ onFinish, prefersReduced }) =
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2 }}
       >
-        <div className="text-center">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="#fedebe" aria-hidden="true">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-          </svg>
-        </div>
+        <img
+          src="/images/logo.png"
+          alt="Walking Little Star Daycare"
+          className="h-36 w-auto object-contain"
+        />
       </motion.div>
     );
   }
@@ -155,30 +155,10 @@ const IntroScreen: React.FC<IntroScreenProps> = ({ onFinish, prefersReduced }) =
 
       {/* Central content */}
       <div className="relative text-center px-8 max-w-lg mx-auto">
-        {/* Glowing star */}
-        <motion.div
-          className="flex justify-center mb-6"
-          initial={{ y: 40, opacity: 0, scale: 0.5 }}
-          animate={{ y: 0, opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2, duration: 0.8, ease: [0.34, 1.56, 0.64, 1] }}
-        >
-          <div className="relative">
-            <motion.div
-              className="absolute inset-0 rounded-full"
-              style={{ background: "radial-gradient(circle, rgba(254,222,190,0.4) 0%, transparent 70%)" }}
-              animate={{ scale: [1, 1.3, 1] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="#fedebe" aria-hidden="true">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-            </svg>
-          </div>
-        </motion.div>
 
-        {/* Curved path */}
+        {/* Curved path decoration */}
         <motion.div
-          className="absolute top-[45%] left-1/2 -translate-x-1/2 w-48 pointer-events-none"
-          initial={{ pathLength: 0, opacity: 0 }}
+          className="absolute left-1/2 -translate-x-1/2 w-48 pointer-events-none"
           animate={{ opacity: 0.3 }}
           style={{ top: "55%" }}
         >
@@ -197,22 +177,25 @@ const IntroScreen: React.FC<IntroScreenProps> = ({ onFinish, prefersReduced }) =
           </svg>
         </motion.div>
 
-        {/* Title */}
-        <motion.h1
-          className="font-display font-semibold text-white leading-tight mb-2"
-          style={{ fontSize: "clamp(1.8rem, 5vw, 2.8rem)" }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.7, ease: "easeOut" }}
+        {/* Logo image */}
+        <motion.div
+          className="flex justify-center mb-4"
+          initial={{ opacity: 0, y: 30, scale: 0.85 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ delay: 0.3, duration: 0.9, ease: [0.34, 1.56, 0.64, 1] }}
         >
-          Walking Little Star
-        </motion.h1>
+          <img
+            src="/images/logo.png"
+            alt="Walking Little Star Daycare"
+            className="h-36 sm:h-44 w-auto object-contain"
+          />
+        </motion.div>
 
         <motion.p
           className="font-body text-sky-light text-lg"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.0, duration: 0.6, ease: "easeOut" }}
+          transition={{ delay: 0.9, duration: 0.6, ease: "easeOut" }}
         >
           A bright beginning starts here.
         </motion.p>

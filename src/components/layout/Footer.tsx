@@ -28,26 +28,15 @@ export const Footer: React.FC = () => {
           <div className="lg:col-span-1">
             <Link
               to="/"
-              className="inline-flex flex-col items-start mb-4 focus-visible:ring-2 focus-visible:ring-sky-brand rounded-lg"
+              className="inline-flex mb-4 focus-visible:ring-2 focus-visible:ring-sky-brand rounded-lg"
               aria-label="Walking Little Star Daycare — Home"
             >
-              <div className="flex items-center gap-1.5 mb-0.5">
-                <span
-                  className="font-display font-semibold text-white leading-tight"
-                  style={{ fontSize: "1.45rem" }}
-                >
-                  Walking{" "}
-                  <span className="text-peach">Little Star</span>
-                </span>
-                <Star size={22} fill="#fedebe" className="flex-shrink-0 -mt-1 text-peach" />
-              </div>
-              <div className="flex items-center gap-1.5 ml-0.5">
-                <span className="w-1 h-1 rounded-full bg-peach/60 inline-block" />
-                <span className="font-body text-peach/70 text-xs tracking-[0.25em] uppercase">
-                  Daycare
-                </span>
-                <span className="w-1 h-1 rounded-full bg-peach/60 inline-block" />
-              </div>
+              <img
+                src="/images/logo.png"
+                alt="Walking Little Star Daycare"
+                className="h-20 w-auto object-contain"
+                loading="lazy"
+              />
             </Link>
 
             <div className="flex items-center gap-2 mb-4">

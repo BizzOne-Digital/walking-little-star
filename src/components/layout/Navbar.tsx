@@ -67,20 +67,15 @@ export const Navbar: React.FC = () => {
           {/* Logo */}
           <Link
             to="/"
-            className="flex items-center gap-2.5 flex-shrink-0 group focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 rounded-lg"
+            className="flex items-center flex-shrink-0 group focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 rounded-lg"
             aria-label="Walking Little Star Daycare — Home"
           >
-            <div className="w-9 h-9 sm:w-10 sm:h-10 bg-navy rounded-full flex items-center justify-center group-hover:scale-105 transition-transform">
-              <Star size={18} fill="white" className="text-white" />
-            </div>
-            <div className="leading-tight">
-              <span className="font-display font-semibold text-navy text-base sm:text-lg block leading-none">
-                Walking Little Star
-              </span>
-              <span className="font-body text-text-muted text-xs hidden sm:block">
-                Daycare LLC
-              </span>
-            </div>
+            <img
+              src="/images/logo.png"
+              alt="Walking Little Star Daycare"
+              className="h-14 sm:h-16 w-auto object-contain group-hover:scale-105 transition-transform"
+              loading="eager"
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -193,15 +188,15 @@ export const Navbar: React.FC = () => {
               <div className="flex items-center justify-between p-5 border-b border-navy/10">
                 <Link
                   to="/"
-                  className="flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-navy rounded-lg"
+                  className="flex items-center focus-visible:ring-2 focus-visible:ring-navy rounded-lg"
                   onClick={() => setMenuOpen(false)}
                 >
-                  <div className="w-9 h-9 bg-navy rounded-full flex items-center justify-center">
-                    <Star size={16} fill="white" className="text-white" />
-                  </div>
-                  <span className="font-display font-semibold text-navy text-base">
-                    Walking Little Star
-                  </span>
+                  <img
+                    src="/images/logo.png"
+                    alt="Walking Little Star Daycare"
+                    className="h-9 w-auto object-contain"
+                    loading="eager"
+                  />
                 </Link>
                 <button
                   onClick={() => setMenuOpen(false)}
