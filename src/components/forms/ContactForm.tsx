@@ -50,7 +50,7 @@ export const ContactForm: React.FC = () => {
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error" | "no-endpoint">("idle");
 
-  const endpoint = import.meta.env.VITE_FORM_ENDPOINT as string | undefined;
+  const apiUrl = (import.meta.env.VITE_API_URL as string | undefined) || "";
 
   const update = (field: keyof FormData, value: string | boolean) => {
     setForm((prev) => ({ ...prev, [field]: value }));
@@ -73,11 +73,11 @@ export const ContactForm: React.FC = () => {
     if (Object.keys(errs).length > 0) { setErrors(errs); return; }
     if (form.honeypot) return;
 
-    if (!endpoint) { setStatus("no-endpoint"); return; }
+    if (!apiUrl) { setStatus("no-endpoint"); return; }
 
     setStatus("loading");
     try {
-      const res = await fetch(endpoint, {
+      const res = await fetch(`${apiUrl}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...form, honeypot: undefined }),
